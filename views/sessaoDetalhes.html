@@ -1,57 +1,57 @@
 <div class="main-nav">
-    <div class="left-child"><a href="#/sessao"><h5>Voltar</a></h5></div>
-    <div class="right-child"><h5>Sessão A</h5></div>
+   <div class="left-child">
+      <a href="#/sessao"><h5>Voltar</a></h5></div>
+   <div class="right-child"><h5>Sessão A</h5></div>
 </div>
-
 <div class="row">
-    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
-        <table class="table table-striped table-hover ">
-          <thead>
+   <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+      <table class="table table-striped table-hover ">
+         <thead>
             <tr>
-              <th colspan="2" class="center-text">Relatório de Participação em Sessões</th>
+               <th colspan="2" class="center-text">Relatório de Participação em Sessões</th>
             </tr>
-          </thead>
-          <tbody>
+         </thead>
+         <tbody>
             <tr>
-              <td>Data</td>
-              <td>27/05/2017</td>
-            </tr>
-            <tr>
-              <td>Número</td>
-              <td>21</td>
-            </tr>
-		        <tr>
-              <td><a href="" class="btn btn-primary">Iniciar</a></td>
-              <td><a href="" class="btn btn-primary disabled">Terminar</a></td>
+               <td>Data</td>
+               <td>27/05/2017</td>
             </tr>
             <tr>
-              <td><input type="radio" name="tipo" value=""checked>Ordinária</td>
-  						<td><input type="radio" name="tipo" value="">Extraordinária</td>
+               <td>Número</td>
+               <td>21</td>
             </tr>
-          </tbody>
-        </table>
-        <table class="table table-striped table-hover ">
-          <thead>
             <tr>
-    					<th>Partido</th>
-    					<th>Vereador</th>
-    					<th>Presente</th>
-      				<th>Obs.</th>
+               <td><a href="" class="btn btn-primary">Iniciar</a></td>
+               <td><a href="" class="btn btn-primary disabled">Terminar</a></td>
             </tr>
-          </thead>
-          <tbody>
+            <tr>
+               <td><input type="radio" name="tipo" value=""checked>Ordinária</td>
+               <td><input type="radio" name="tipo" value="">Extraordinária</td>
+            </tr>
+         </tbody>
+      </table>
+      <table class="table table-striped table-hover ">
+         <thead>
+            <tr>
+               <th>Partido</th>
+               <th>Vereador</th>
+               <th>Presente</th>
+               <th>Obs.</th>
+            </tr>
+         </thead>
+         <tbody>
             <tr ng-repeat="vereador in vereadores">
-      				<td>{{vereador.party}}</td>
-      				<td>{{vereador.name}}</td>
-      				<td>
-      					<div class="">
-      						<button ng-hide="!vereador.is_present" ng-click="click(vereador)" class="btn btn-success btn-absolute-position" name="button">Sim</button>
-      						<button ng-hide="vereador.is_present" ng-click="click(vereador)" class="btn btn-danger btn-absolute-position" name="button">Não</button>
-      					</div>
-      				</td>
-      				<td><input type="text" placeholder="Obs."></td>
+               <td>{{vereador.party}}</td>
+               <td>{{vereador.name}}</td>
+               <td>
+                  <div class="">
+                     <button ng-hide="!vereador.is_present" ng-click="click(vereador)" class="btn btn-success btn-absolute-position" name="button">Sim</button>
+                     <button ng-hide="vereador.is_present" ng-click="click(vereador)" class="btn btn-danger btn-absolute-position" name="button">Não</button>
+                  </div>
+               </td>
+               <td><input type="text" placeholder="Obs."></td>
             </tr>
-          </tbody>
-        </table>
-    </div>
+         </tbody>
+      </table>
+   </div>
 </div>

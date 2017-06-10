@@ -10,12 +10,12 @@ app.controller("sessaoDetalhesCtrl", function ($scope, $mdDialog, vereadorApiSer
         });
     };
 
-    $scope.click = function(obj) {
-        // alert("Você clicou no id: " + obj._id);
-        obj.is_present = obj.is_present ? false : true;
+    $scope.click = function(councilman) {
+        //alert("Você clicou no id: " + obj._id);
+        councilman.is_present = councilman.is_present ? false : true;
 
-        vereadorApiService.update(obj).success(function(data, status) {
-            // alert('Item ' + data.councilman.name + ' updated.');
+        vereadorApiService.update(councilman).success(function(data, status) {
+            console.log('Councilman ' + data.councilman.name + ' updated.');
         }).error(function(data, status) {
             alert('Unable to update item.');
         });
