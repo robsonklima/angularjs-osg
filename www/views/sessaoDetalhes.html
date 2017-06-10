@@ -45,11 +45,13 @@
                <td>{{vereador.name}}</td>
                <td>
                   <div class="">
-                     <button ng-hide="!vereador.is_present" ng-click="click(vereador)" class="btn btn-success btn-absolute-position" name="button">Sim</button>
-                     <button ng-hide="vereador.is_present" ng-click="click(vereador)" class="btn btn-danger btn-absolute-position" name="button">Não</button>
+                     <button ng-hide="!vereador.is_present" ng-click="click(vereador)" 
+                             class="btn btn-success btn-absolute-position" name="button">Sim</button>
+                     <button ng-hide="vereador.is_present" ng-click="click(vereador)" 
+                             class="btn btn-danger btn-absolute-position" name="button">Não</button>
                   </div>
                </td>
-               <td><input type="text" placeholder="Obs."></td>
+               <td><input type="text" placeholder="Obs." width="50px"></td>
             </tr>
          </tbody>
       </table>
