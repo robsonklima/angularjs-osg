@@ -1,0 +1,33 @@
+<html ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+	<title>OSG</title>
+	<!-- stylesheets -->
+	<link rel="stylesheet" type="text/css" href="lib/bootswatch/bootswatch-paper-min.css">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+	<link rel="stylesheet" href="lib/material/angular-material.min.css">
+
+	<!-- angular and plugins -->
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/angular/angular-messages.js"></script>
+	<script src="lib/angular/angular-route.js"></script>
+	<script src="lib/angular/angular-cookies.js"></script>
+	<script src="lib/angular/angular-animate.min.js"></script>
+	<script src="lib/angular/angular-aria.min.js"></script>
+	<script src="lib/material/angular-material.min.js"></script>
+	<script src="lib/angular/angular-locale_pt-br.js"></script>
+
+  <!-- my app -->
+	<script src="js/app.js"></script>
+  <script src="js/constants/contants.js"></script>
+	<script src="js/config/routeConfig.js"></script>
+
+	<script src="js/controllers/sessaoDetalhesCtrl.js"></script>
+	<script src="js/services/vereadorApiService.js"></script>
+</head>
+<body>
+	<div ng-view></div>
+	<div ng-include="'views/footer.html'"></div>
+</body>
+</html>
