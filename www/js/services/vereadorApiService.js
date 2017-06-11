@@ -2,21 +2,21 @@ app.factory("vereadorApiService", function($http, constants) {
 
     var _find = function() {
         return $http({
-            url: constants.apiUrl + 'councilmen/',
+            url: constants.apiUrl + 'api/vereadores/',
             method: 'GET'
         });
     }
 
     var _findById = function(id) {
         return $http({
-            url: constants.apiUrl + 'councilmen/' + id,
+            url: constants.apiUrl + 'api/vereadores/' + id,
             method: 'GET'
         });
     }
 
     var _insert = function(obj) {
         return $http({
-            url: constants.apiUrl + 'councilmen/',
+            url: constants.apiUrl + 'api/vereadores/',
             method: 'POST',
             data: obj
         });
@@ -24,7 +24,7 @@ app.factory("vereadorApiService", function($http, constants) {
 
     var _update = function(obj) {
         return $http({
-           url: constants.apiUrl + 'councilmen/' + obj._id,
+           url: constants.apiUrl + 'api/vereadores/' + obj._id,
            method: 'PATCH',
            data: obj
         })
@@ -32,7 +32,7 @@ app.factory("vereadorApiService", function($http, constants) {
 
     var _remove = function(obj) {
         return $http({
-           url: constants.apiUrl + 'councilmen/' + obj._id,
+           url: constants.apiUrl + 'api/vereadores/' + obj._id,
            method: 'DELETE'
         });
     }

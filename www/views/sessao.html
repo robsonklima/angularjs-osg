@@ -1,16 +1,50 @@
 <div class="main-nav">
-   <div class="right-child"><h5>Sessões</h5></div>
+   <div class="left-child">
+      <a href="#/sessoes"><h5>Voltar</a></h5></div>
+   <div class="right-child"><h5>Sessão {{sessao.numero}}</h5></div>
 </div>
-<div class="container">
+
 <div class="row">
-   <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
-      <div class="list-group table-of-contents">
-         <a class="list-group-item list-group-item-single" href="#/sessaoDetalhes">Sessão A</a>
-         <a class="list-group-item list-group-item-single" href="#/sessaoDetalhes">Sessão B</a>
-         <a class="list-group-item list-group-item-single" href="#/sessaoDetalhes">Sessão C</a>
-         <a class="list-group-item list-group-item-single" href="#/sessaoDetalhes">Sessão D</a>
-         <a class="list-group-item list-group-item-single" href="#/erro">Página de Erro</a>
-         <a class="list-group-item list-group-item-single" href="#/login">Sair</a>
+
+   <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+      <div class="well">
+         <h6 class="center-text">Relatório de Participação em Sessões</h6>
+         <h6 class="center-text">{{sessao.dataprevista}}</h6>
       </div>
+      <div class="btn-group btn-group-justified btn-m-bottom" ng-hide="sessao.status === sessaoIniciada">
+          <a type="button" class="btn btn-primary" ng-click="iniciaSessao()">Iniciar Sessão</a>
+      </div>
+      <div class="btn-group btn-group-justified btn-m-bottom" ng-hide="sessao.status !== sessaoIniciada">
+          <a type="button" class="btn btn-warning" ng-click="terminaSessao()">Terminar Sessão</a>
+      </div>
+    </div>
+
+    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+        <table class="table table-striped table-hover" ng-show="sessao.status === sessaoIniciada">
+           <thead>
+              <tr>
+                 <th>Vereador</th>
+                 <th class="center-text">Partido</th>
+                 <th class="center-text">Presente</th>
+                 <!--<th>Obs.</th>-->
+              </tr>
+           </thead>
+           <tbody>
+              <tr ng-repeat="vereador in vereadores">
+                 <td>{{vereador.nome | ellipsis}}</td>
+                 <td class="center-text">{{vereador.partido}}</td>
+                 <td class="ten-percent-width">
+                     <div class="btn-group btn-group-justified">
+                         <a type="button" class="btn btn-success" ng-click="registraSaida(vereador)">Sim</a>
+                     </div>
+
+                     <div class="btn-group btn-group-justified">
+                         <a type="button" class="btn btn-danger" ng-click="registraPresenca(vereador)">Não</a>
+                     </div>
+                 </td>
+                 <!--<td><input type="text" placeholder="Obs." style="width:10px"></td>-->
+              </tr>
+           </tbody>
+        </table>
    </div>
 </div>

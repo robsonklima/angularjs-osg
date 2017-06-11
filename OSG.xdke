@@ -17,5 +17,10 @@
         "prefix": "tinyhippos-"
       }
     }
+  },
+  "build-tab": {
+    "selectedTargets": [
+      "CORDOVA_ANDROID"
+    ]
   }
 }

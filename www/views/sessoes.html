@@ -1,0 +1,12 @@
+<div class="main-nav">
+   <div class="right-child"><h5>Sessões</h5></div>
+</div>
+<div class="container">
+<div class="row">
+   <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+      <div class="list-group table-of-contents">
+         <a ng-repeat="sessao in sessoes" class="list-group-item list-group-item-single" href="#/sessao/{{sessao.sessao_id}}">Sessão {{sessao.numero}}</a>
+         <a class="list-group-item list-group-item-single" href="#/login">Sair</a>
+      </div>
+   </div>
+</div>

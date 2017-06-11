@@ -6,6 +6,14 @@ html {
   position: absolute;
 }
 
+.btn-m-bottom {
+  margin-bottom: 20px;
+}
+
+.ten-percent-width {
+  width: 10%;
+}
+
 .center-text {
   text-align: center;
 }

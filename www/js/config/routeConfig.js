@@ -11,12 +11,13 @@ app.config(function ($routeProvider, $httpProvider) {
     });
 
     // Main
-    $routeProvider.when("/sessao", {
-       templateUrl: "views/sessao.html"
+    $routeProvider.when("/sessoes", {
+       templateUrl: "views/sessoes.html",
+       controller: "sessoesCtrl"
     });
-    $routeProvider.when("/sessaoDetalhes", {
-       templateUrl: "views/sessaoDetalhes.html",
-       controller: "sessaoDetalhesCtrl"
+    $routeProvider.when("/sessao/:id", {
+       templateUrl: "views/sessao.html",
+       controller: "sessaoCtrl"
     });
 
     // Error
